@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    background-color: #b9b9b9;
+}
+
+:root {
+    --Top_margin: 1vh;
+    --Image_height: 30rem;
+}
+
+
+.Carasol_container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+}
+
+
+.Carasol_container img.Child_image {
+    width: 30rem;
+    height: var(--Image_height);
+    position: absolute;
+    top: var(--Top_margin);
+    z-index: var(--z-index);
+    /*TRANSFORM*/
+    transform: translateX(calc(var(--translateX) * 1px)) scale(var(--scale));
+    -webkit-transform: translateX(calc(var(--translateX) * 1px)) scale(var(--scale));
+    -moz-transform: translateX(calc(var(--translateX) * 1px)) scale(var(--scale));
+    -ms-transform: translateX(calc(var(--translateX) * 1px)) scale(var(--scale));
+    -o-transform: translateX(calc(var(--translateX) * 1px)) scale(var(--scale));
+    /*TRANSITION*/
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    /*BORDERRADIUS*/
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    cursor: pointer;
+}
+
+.Carasol_container img.Child_image:hover {
+    --scale: 1 !important;
+}
+
+/* 
+.Carasol_container img.Child_image:nth-child(1) {
+    --z-index: 1;
+    --translateX: -660%;
+    --scale: 1;
+}
+
+.Carasol_container img.Child_image:nth-child(2) {
+    --z-index: 2;
+    --translateX: -550%;
+    --scale: 1;
+}
+
+.Carasol_container img.Child_image:nth-child(3) {
+    --z-index: 3;
+    --translateX: -440%;
+    --scale: 1;
+}
+
+.Carasol_container img.Child_image:nth-child(4) {
+    --z-index: 4;
+    --translateX: -330%;
+    --scale: 1;
+}
+
+.Carasol_container img.Child_image:nth-child(5) {
+    --z-index: 5;
+    --translateX: -220%;
+    --scale: 1;
+}
+
+.Carasol_container img.Child_image:nth-child(6) {
+    --z-index: 6;
+    --translateX: -110%;
+    --scale: 1;
+}
+.Carasol_container img.Child_image:nth-child(7) {
+    --z-index: 7;
+    --translateX: 0%;
+    --scale: 1;
+}
+.Carasol_container img.Child_image:nth-child(8) {
+    --z-index: 6;
+    --translateX: 110%;
+    --scale: 1;
+}
+.Carasol_container img.Child_image:nth-child(9) {
+    --z-index: 5;
+    --translateX: 220%;
+    --scale: 1;
+}
+.Carasol_container img.Child_image:nth-child(10) {
+    --z-index: 4;
+    --translateX: 330%;
+    --scale: 1;
+}
+.Carasol_container img.Child_image:nth-child(11) {
+    --z-index: 3;
+    --translateX: 440%;
+    --scale: 1;
+}
+.Carasol_container img.Child_image:nth-child(12) {
+    --z-index: 2;
+    --translateX: 550%;
+    --scale: 1;
+} 
+.Carasol_container img.Child_image:nth-child(13) {
+    --z-index: 1;
+    --translateX: 660%;
+    --scale: 1;
+}  */
+
+.Carasol_container{
+    position:relative;
+}
+
+.Button {
+    height: var(--Image_height);
+    margin-top: var(--Top_margin);
+    /* border: .2rem solid var(--Bcolor, #000); */
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    z-index: 20;
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.Left_button {
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    transform: translate(var(--translateX), var(--translateY));
+    -webkit-transform: translate(var(--translateX), var(--translateY));
+    -moz-transform: translate(var(--translateX), var(--translateY));
+    -ms-transform: translate(var(--translateX), var(--translateY));
+    -o-transform: translate(var(--translateX), var(--translateY));
+    --translateY: 0%;
+    --translateX: 0%;
+
+}
+
+.Left_button:hover {
+    animation: Btn_hover_effect_left .5s linear 2 alternate;
+    -webkit-animation: Btn_hover_effect_left .5s linear 2 alternate;
+}
+
+@keyframes Btn_hover_effect_left {
+    from {
+        left: 3rem;
+    }
+
+    to {
+        left: 1rem;
+
+    }
+}
+
+.Right_button {
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+}
+
+.Right_button:hover {
+    animation: Btn_hover_effect_right .5s linear 2 alternate;
+    -webkit-animation: Btn_hover_effect_right .5s linear 2 alternate;
+}
+
+@keyframes Btn_hover_effect_right {
+    from {
+        right: 3rem;
+    }
+
+    to {
+        right: 1rem;
+
+    }
+}
+
+.Button img {
+    width: 4rem;
+    height: auto;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.Button img:hover {
+    width: 5rem;
+    height: auto;
+}
